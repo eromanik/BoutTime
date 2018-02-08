@@ -61,6 +61,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // detect shake event and end round if shaken
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            endRound()
+        }
+    }
 
     func startRound() {
         runTimer()
@@ -69,7 +77,21 @@ class ViewController: UIViewController {
     }
     
     func endRound() {
+        if checkAnswers() {
+            // set next round button background to success and increment correct answer count
+            
+        } else {
+            // set next round button background to fail
+            
+        }
         
+        // display next round button
+        nextRoundButton.isHidden = false
+        
+        // delete timer
+        timer?.invalidate()
+        
+        // increment question count
     }
     
     func runTimer() {
@@ -91,13 +113,7 @@ class ViewController: UIViewController {
         
         // when seconds run out, check answers
         if seconds == 0 {
-            if checkAnswers() {
-                
-                
-            } else {
-                nextRoundButton.isHidden = false
-            }
-            timer?.invalidate()
+            endRound()
         }
         
         
