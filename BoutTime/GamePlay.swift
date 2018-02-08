@@ -8,7 +8,11 @@
 
 import Foundation
 
-
+func checkAnswers() -> Bool {
+    
+    return false
+    
+}
 
 
 

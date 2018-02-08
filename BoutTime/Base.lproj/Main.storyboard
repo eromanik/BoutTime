@@ -25,12 +25,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rKg-BD-erc">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="119.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmL-NL-rr3">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmL-NL-rr3">
                                                 <rect key="frame" x="294.5" y="0.0" width="40.5" height="119.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="MmL-NL-rr3" secondAttribute="height" multiplier="158:457" id="kyu-T2-bHc"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="down_full.png"/>
+                                                <state key="selected" backgroundImage="down_full_selected.png"/>
+                                                <state key="highlighted" backgroundImage="down_full_selected.png"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sputnik was launched by the USSR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDa-S0-aRf">
                                                 <rect key="frame" x="20" y="49.5" width="254.5" height="19.5"/>
@@ -60,19 +62,21 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ylb-Mv-FlV">
                                                 <rect key="frame" x="293.5" y="0.0" width="41.5" height="119"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0u-xB-EOh">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0u-xB-EOh">
                                                         <rect key="frame" x="0.0" y="0.0" width="41.5" height="59"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="G0u-xB-EOh" secondAttribute="height" multiplier="42:61" id="Yoh-30-kgL"/>
                                                         </constraints>
                                                         <state key="normal" backgroundImage="up_half.png"/>
+                                                        <state key="highlighted" backgroundImage="up_half_selected.png"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY7-EA-UlU">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY7-EA-UlU">
                                                         <rect key="frame" x="0.0" y="59" width="41.5" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="nY7-EA-UlU" secondAttribute="height" multiplier="42:61" id="U4e-U5-8JJ"/>
                                                         </constraints>
                                                         <state key="normal" backgroundImage="down_half.png"/>
+                                                        <state key="highlighted" backgroundImage="down_half_selected.png"/>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -102,26 +106,28 @@
                                         <rect key="frame" x="0.0" y="258.5" width="335" height="119.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PYi-kv-vvx">
-                                                <rect key="frame" x="294.5" y="0.0" width="40.5" height="119.5"/>
+                                                <rect key="frame" x="294" y="0.0" width="41" height="119.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rki-P1-cDF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="59"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rki-P1-cDF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="41" height="59.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Rki-P1-cDF" secondAttribute="height" multiplier="42:61" id="UYy-Pb-JLm"/>
                                                         </constraints>
                                                         <state key="normal" backgroundImage="up_half.png"/>
+                                                        <state key="highlighted" backgroundImage="up_half_selected.png"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tg1-pm-kpG">
-                                                        <rect key="frame" x="0.0" y="59" width="40.5" height="60.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tg1-pm-kpG">
+                                                        <rect key="frame" x="0.0" y="59.5" width="41" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Tg1-pm-kpG" secondAttribute="height" multiplier="42:61" id="w97-0h-rxR"/>
                                                         </constraints>
                                                         <state key="normal" backgroundImage="down_half.png"/>
+                                                        <state key="highlighted" backgroundImage="down_half_selected.png"/>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sputnik was launched by the USSR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrH-DR-1WT">
-                                                <rect key="frame" x="20" y="50" width="254.5" height="19.5"/>
+                                                <rect key="frame" x="20" y="50" width="254" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.0" green="0.15765291449999999" blue="0.39071524140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -145,12 +151,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIZ-gc-9mQ">
                                         <rect key="frame" x="0.0" y="388" width="335" height="119"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlM-z9-OXR">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlM-z9-OXR">
                                                 <rect key="frame" x="294" y="0.0" width="41" height="118.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="mlM-z9-OXR" secondAttribute="height" multiplier="158:457" id="xp5-yO-6G3"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="up_full.png"/>
+                                                <state key="highlighted" backgroundImage="up_full_selected.png"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sputnik was launched by the USSR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d76-Z0-Den">
                                                 <rect key="frame" x="20" y="50" width="254" height="19.5"/>
@@ -188,9 +195,19 @@
                                 <color key="textColor" red="0.18729665875434875" green="0.53918766975402832" blue="0.68108826875686646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gU-tz-18b">
+                                <rect key="frame" x="92" y="565" width="191" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="BTr-5h-Se4"/>
+                                    <constraint firstAttribute="width" constant="191" id="Z9N-Yn-b56"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="next_round_fail.png"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.16078431372549018" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="5gU-tz-18b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HIL-l3-YjA"/>
+                            <constraint firstItem="cdK-G0-OFB" firstAttribute="top" secondItem="5gU-tz-18b" secondAttribute="bottom" constant="10" id="Iv8-Cl-C4r"/>
                             <constraint firstItem="3f2-5q-rcX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Nq1-LD-FBz"/>
                             <constraint firstItem="3iO-oE-we5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yji-IT-JUc"/>
                             <constraint firstItem="3f2-5q-rcX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fX7-AC-IY3"/>
@@ -203,6 +220,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="eventLabel0" destination="bDa-S0-aRf" id="Ozs-sP-KLm"/>
+                        <outlet property="eventLabel1" destination="a5T-ad-Aqv" id="mfO-4H-rzH"/>
+                        <outlet property="eventLabel2" destination="CrH-DR-1WT" id="kT0-6Y-td1"/>
+                        <outlet property="eventLabel3" destination="d76-Z0-Den" id="qjk-Bh-L5m"/>
+                        <outlet property="nextRoundButton" destination="5gU-tz-18b" id="qhP-vY-E2F"/>
                         <outlet property="timerLabel" destination="3iO-oE-we5" id="Z1k-eR-2iq"/>
                     </connections>
                 </viewController>
@@ -213,8 +235,13 @@
     </scenes>
     <resources>
         <image name="down_full.png" width="158" height="457"/>
+        <image name="down_full_selected.png" width="158" height="457"/>
         <image name="down_half.png" width="158" height="229"/>
+        <image name="down_half_selected.png" width="158" height="229"/>
+        <image name="next_round_fail.png" width="558" height="142"/>
         <image name="up_full.png" width="158" height="457"/>
+        <image name="up_full_selected.png" width="158" height="457"/>
         <image name="up_half.png" width="158" height="229"/>
+        <image name="up_half_selected.png" width="158" height="229"/>
     </resources>
 </document>

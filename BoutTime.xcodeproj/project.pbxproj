@@ -33,6 +33,7 @@
 		07605225202262C30028EB79 /* down_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 07605211202262C20028EB79 /* down_full.png */; };
 		07605226202262C30028EB79 /* icon180@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07605212202262C30028EB79 /* icon180@3x.png */; };
 		0760522A202B8D5A0028EB79 /* GamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07605229202B8D5A0028EB79 /* GamePlay.swift */; };
+		0760522C202CC6A60028EB79 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760522B202CC6A60028EB79 /* Events.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		07605211202262C20028EB79 /* down_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_full.png; sourceTree = "<group>"; };
 		07605212202262C30028EB79 /* icon180@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon180@3x.png"; sourceTree = "<group>"; };
 		07605229202B8D5A0028EB79 /* GamePlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlay.swift; sourceTree = "<group>"; };
+		0760522B202CC6A60028EB79 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				076051F6201FBAC80028EB79 /* LaunchScreen.storyboard */,
 				076051F9201FBAC80028EB79 /* Info.plist */,
 				07605229202B8D5A0028EB79 /* GamePlay.swift */,
+				0760522B202CC6A60028EB79 /* Events.swift */,
 			);
 			path = BoutTime;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0760522C202CC6A60028EB79 /* Events.swift in Sources */,
 				076051F0201FBAC80028EB79 /* ViewController.swift in Sources */,
 				076051EE201FBAC80028EB79 /* AppDelegate.swift in Sources */,
 				0760522A202B8D5A0028EB79 /* GamePlay.swift in Sources */,
