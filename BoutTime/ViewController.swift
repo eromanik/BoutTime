@@ -46,9 +46,12 @@ class ViewController: UIViewController {
         displayEvents()
     }
     
-    
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var nextRoundButton: UIButton!
+    
+    @IBAction func nextRoundButton(_ sender: Any) {
+        startRound()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,20 +74,23 @@ class ViewController: UIViewController {
     }
 
     func startRound() {
+        seconds = 60
+        nextRoundButton.isHidden = true
         runTimer()
         roundEvents = generateEventRound()
         displayEvents()
     }
     
     func endRound() {
-        if checkAnswers() {
+        let image: UIImage
+        if roundEvents.isOrderedCorrectly() {
             // set next round button background to success and increment correct answer count
-            
+            image = UIImage(named: "next_round_success.png")!
         } else {
             // set next round button background to fail
-            
+            image = UIImage(named: "next_round_fail.png")!
         }
-        
+        nextRoundButton.setBackgroundImage(image, for: UIControlState.normal)
         // display next round button
         nextRoundButton.isHidden = false
         

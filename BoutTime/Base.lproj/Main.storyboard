@@ -174,8 +174,7 @@
                                                 <state key="normal" backgroundImage="up_full.png"/>
                                                 <state key="highlighted" backgroundImage="up_full_selected.png"/>
                                                 <connections>
-                                                    <action selector="eventButtonUp3" destination="BYZ-38-t0r" eventType="touchUpInside" id="cq3-8c-amw"/>
-                                                    <action selector="eventButtonUp3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qxA-CF-1OZ"/>
+                                                    <action selector="eventButtonUp3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hRx-WC-FMZ"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sputnik was launched by the USSR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d76-Z0-Den">
@@ -221,6 +220,9 @@
                                     <constraint firstAttribute="width" constant="191" id="Z9N-Yn-b56"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="next_round_fail.png"/>
+                                <connections>
+                                    <action selector="nextRoundButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZgR-FB-U9j"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.16078431372549018" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

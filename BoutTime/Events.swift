@@ -17,7 +17,11 @@ struct EventRound {
     var events: [Event]
     
     func isOrderedCorrectly() -> Bool {
-        return false
+        if self.events[0].year < self.events[1].year && self.events[1].year < self.events[2].year && self.events[2].year < self.events[3].year {
+            return true
+        } else {
+            return false
+        }
     }
     
     func orderEvents() -> EventRound {
