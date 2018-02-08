@@ -21,6 +21,32 @@ class ViewController: UIViewController {
     @IBOutlet weak var eventLabel2: UILabel!
     @IBOutlet weak var eventLabel3: UILabel!
     
+    @IBAction func eventButtonDown0(_ sender: Any) {
+        roundEvents.events.swapAt(0, 1)
+        displayEvents()
+    }
+    @IBAction func eventButtonUp1(_ sender: Any) {
+        roundEvents.events.swapAt(0, 1)
+        displayEvents()
+    }
+    @IBAction func eventButtonDown1(_ sender: Any) {
+        roundEvents.events.swapAt(1, 2)
+        displayEvents()
+    }
+    @IBAction func eventButtonUp2(_ sender: Any) {
+        roundEvents.events.swapAt(1, 2)
+        displayEvents()
+    }
+    @IBAction func eventButtonDown2(_ sender: Any) {
+        roundEvents.events.swapAt(2, 3)
+        displayEvents()
+    }
+    @IBAction func eventButtonUp3(_ sender: Any) {
+        roundEvents.events.swapAt(2, 3)
+        displayEvents()
+    }
+    
+    
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var nextRoundButton: UIButton!
     
@@ -40,6 +66,10 @@ class ViewController: UIViewController {
         runTimer()
         roundEvents = generateEventRound()
         displayEvents()
+    }
+    
+    func endRound() {
+        
     }
     
     func runTimer() {
