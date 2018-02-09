@@ -7,6 +7,10 @@
 //
 
 import GameKit
+import AudioToolbox
+
+var roundCount = 0
+var correctRoundCount = 0
 
 struct Event {
     let eventDescription: String
@@ -22,10 +26,6 @@ struct EventRound {
         } else {
             return false
         }
-    }
-    
-    func orderEvents() -> EventRound {
-        return self
     }
 }
 
