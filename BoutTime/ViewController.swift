@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AudioToolbox
 
 class ViewController: UIViewController {
 
@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     weak var timer: Timer?
     var isTimerRunning = false
     var roundEvents = EventRound(events:[])
+    
+    var correctSound: SystemSoundID = 0
+    var wrongSound: SystemSoundID = 1
     
     @IBOutlet weak var eventLabel0: UILabel!
     @IBOutlet weak var eventLabel1: UILabel!
@@ -59,9 +62,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        loadCorrectAnswerSound()
+        loadWrongAnswerSound()
         startRound()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -98,10 +101,12 @@ class ViewController: UIViewController {
         let image: UIImage
         if roundEvents.isOrderedCorrectly() {
             // set next round button background to success and increment correct answer count
+            AudioServicesPlaySystemSound(correctSound)
             image = UIImage(named: "next_round_success.png")!
             correctRoundCount += 1
         } else {
             // set next round button background to fail
+            AudioServicesPlaySystemSound(wrongSound)
             image = UIImage(named: "next_round_fail.png")!
         }
         nextRoundButton.setBackgroundImage(image, for: UIControlState.normal)
@@ -135,8 +140,18 @@ class ViewController: UIViewController {
         if seconds == 0 {
             endRound()
         }
-        
-        
+    }
+    
+    func loadCorrectAnswerSound() {
+        let pathToSoundFile = Bundle.main.path(forResource: "CorrectDing", ofType: "wav")
+        let soundURL = URL(fileURLWithPath: pathToSoundFile!)
+        AudioServicesCreateSystemSoundID(soundURL as CFURL, &correctSound)
+    }
+    
+    func loadWrongAnswerSound() {
+        let pathToSoundFile = Bundle.main.path(forResource: "IncorrectBuzz", ofType: "wav")
+        let soundURL = URL(fileURLWithPath: pathToSoundFile!)
+        AudioServicesCreateSystemSoundID(soundURL as CFURL, &wrongSound)
     }
     
 }
