@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,17 +17,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BoutTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3f2-5q-rcX">
-                                <rect key="frame" x="20" y="40" width="280" height="408"/>
+                                <rect key="frame" x="20" y="40" width="335" height="507"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="rKg-BD-erc">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="94.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="119.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmL-NL-rr3">
-                                                <rect key="frame" x="247.5" y="0.0" width="32.5" height="94.5"/>
+                                                <rect key="frame" x="294" y="0.0" width="41" height="119.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="MmL-NL-rr3" secondAttribute="height" multiplier="158:457" id="kyu-T2-bHc"/>
                                                 </constraints>
@@ -38,21 +38,25 @@
                                                     <action selector="eventButtonDown0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I8e-gA-3bj"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sputnik was launched by the USSR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDa-S0-aRf">
-                                                <rect key="frame" x="20" y="28" width="207.5" height="38.5"/>
+                                            <button opaque="NO" contentMode="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Hgt-EH-XOM">
+                                                <rect key="frame" x="20" y="43" width="254" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" red="0.0" green="0.15765291452407837" blue="0.39071524143218994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="Sputnik was launched by the USSR">
+                                                    <color key="titleColor" red="0.0" green="0.16078431369999999" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="openWebView0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jSz-av-V1v"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="MmL-NL-rr3" firstAttribute="top" secondItem="rKg-BD-erc" secondAttribute="top" id="6bA-9W-zQR"/>
+                                            <constraint firstItem="Hgt-EH-XOM" firstAttribute="centerY" secondItem="rKg-BD-erc" secondAttribute="centerY" id="7TE-kv-Waw"/>
                                             <constraint firstAttribute="trailing" secondItem="MmL-NL-rr3" secondAttribute="trailing" id="8X9-fy-GrE"/>
-                                            <constraint firstItem="MmL-NL-rr3" firstAttribute="leading" secondItem="bDa-S0-aRf" secondAttribute="trailing" constant="20" id="HXs-jv-N8J"/>
-                                            <constraint firstItem="bDa-S0-aRf" firstAttribute="leading" secondItem="rKg-BD-erc" secondAttribute="leading" constant="20" id="Zaw-bT-2Pn"/>
+                                            <constraint firstItem="MmL-NL-rr3" firstAttribute="leading" secondItem="Hgt-EH-XOM" secondAttribute="trailing" constant="20" id="ZJ1-LM-tE8"/>
                                             <constraint firstAttribute="bottom" secondItem="MmL-NL-rr3" secondAttribute="bottom" id="jXO-Sm-qzL"/>
-                                            <constraint firstItem="bDa-S0-aRf" firstAttribute="centerY" secondItem="rKg-BD-erc" secondAttribute="centerY" id="ltG-zN-Ik5"/>
+                                            <constraint firstItem="Hgt-EH-XOM" firstAttribute="leading" secondItem="rKg-BD-erc" secondAttribute="leading" constant="20" id="uTL-ZI-vur"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -61,13 +65,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="DHA-aQ-Fp0">
-                                        <rect key="frame" x="0.0" y="104.5" width="280" height="94.5"/>
+                                        <rect key="frame" x="0.0" y="129.5" width="335" height="119"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ylb-Mv-FlV">
-                                                <rect key="frame" x="247.5" y="0.5" width="32.5" height="94.5"/>
+                                                <rect key="frame" x="294" y="0.5" width="41" height="119"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0u-xB-EOh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="32.5" height="47.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="41" height="59.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="G0u-xB-EOh" secondAttribute="height" multiplier="42:61" id="Yoh-30-kgL"/>
                                                         </constraints>
@@ -78,7 +82,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY7-EA-UlU">
-                                                        <rect key="frame" x="0.0" y="47.5" width="32.5" height="47"/>
+                                                        <rect key="frame" x="0.0" y="59.5" width="41" height="59.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="nY7-EA-UlU" secondAttribute="height" multiplier="42:61" id="U4e-U5-8JJ"/>
                                                         </constraints>
@@ -90,20 +94,24 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sputnik was launched by the USSR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5T-ad-Aqv">
-                                                <rect key="frame" x="20" y="28.5" width="207.5" height="38.5"/>
+                                            <button opaque="NO" contentMode="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="pmt-rz-FHW">
+                                                <rect key="frame" x="20" y="44" width="254" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" red="0.0" green="0.15765291449999999" blue="0.39071524140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="Sputnik was launched by the USSR">
+                                                    <color key="titleColor" red="0.0" green="0.16078431369999999" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="openWebView1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Qu-Se-aXt"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="a5T-ad-Aqv" firstAttribute="leading" secondItem="DHA-aQ-Fp0" secondAttribute="leading" constant="20" id="7s7-aC-DDn"/>
-                                            <constraint firstItem="Ylb-Mv-FlV" firstAttribute="leading" secondItem="a5T-ad-Aqv" secondAttribute="trailing" constant="20" id="8wL-IJ-H7t"/>
+                                            <constraint firstItem="Ylb-Mv-FlV" firstAttribute="leading" secondItem="pmt-rz-FHW" secondAttribute="trailing" constant="20" id="2Gt-5N-Oz2"/>
+                                            <constraint firstItem="pmt-rz-FHW" firstAttribute="leading" secondItem="DHA-aQ-Fp0" secondAttribute="leading" constant="20" id="KDc-8X-KlJ"/>
+                                            <constraint firstItem="pmt-rz-FHW" firstAttribute="centerY" secondItem="DHA-aQ-Fp0" secondAttribute="centerY" id="LVK-zz-gmB"/>
                                             <constraint firstItem="Ylb-Mv-FlV" firstAttribute="top" secondItem="DHA-aQ-Fp0" secondAttribute="top" id="PI1-P0-aK2"/>
                                             <constraint firstAttribute="bottom" secondItem="Ylb-Mv-FlV" secondAttribute="bottom" id="b8D-So-lUW"/>
-                                            <constraint firstItem="a5T-ad-Aqv" firstAttribute="centerY" secondItem="DHA-aQ-Fp0" secondAttribute="centerY" id="c8d-pF-9NE"/>
                                             <constraint firstAttribute="trailing" secondItem="Ylb-Mv-FlV" secondAttribute="trailing" id="fFn-aw-gWM"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -113,13 +121,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="m1S-4k-aIU">
-                                        <rect key="frame" x="0.0" y="209" width="280" height="94.5"/>
+                                        <rect key="frame" x="0.0" y="258.5" width="335" height="119.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PYi-kv-vvx">
-                                                <rect key="frame" x="247.5" y="0.0" width="32.5" height="94.5"/>
+                                                <rect key="frame" x="294" y="0.0" width="41" height="119.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rki-P1-cDF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="32.5" height="47"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="41" height="59.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Rki-P1-cDF" secondAttribute="height" multiplier="42:61" id="UYy-Pb-JLm"/>
                                                         </constraints>
@@ -130,7 +138,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tg1-pm-kpG">
-                                                        <rect key="frame" x="0.0" y="47" width="32.5" height="47.5"/>
+                                                        <rect key="frame" x="0.0" y="59.5" width="41" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Tg1-pm-kpG" secondAttribute="height" multiplier="42:61" id="w97-0h-rxR"/>
                                                         </constraints>
@@ -142,20 +150,24 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Sputnik was launched by the USSR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrH-DR-1WT">
-                                                <rect key="frame" x="20" y="28" width="207.5" height="38.5"/>
+                                            <button opaque="NO" contentMode="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Pjy-6h-Lxi">
+                                                <rect key="frame" x="20" y="44" width="254" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" red="0.0" green="0.15765291449999999" blue="0.39071524140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="Sputnik was launched by the USSR">
+                                                    <color key="titleColor" red="0.0" green="0.16078431369999999" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="openWebView2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhu-aB-l4R"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="CrH-DR-1WT" firstAttribute="leading" secondItem="m1S-4k-aIU" secondAttribute="leading" constant="20" id="0am-Td-aGd"/>
+                                            <constraint firstItem="Pjy-6h-Lxi" firstAttribute="leading" secondItem="m1S-4k-aIU" secondAttribute="leading" constant="20" id="9gl-HW-ZNP"/>
                                             <constraint firstAttribute="bottom" secondItem="PYi-kv-vvx" secondAttribute="bottom" id="MFW-6u-a7T"/>
-                                            <constraint firstItem="PYi-kv-vvx" firstAttribute="leading" secondItem="CrH-DR-1WT" secondAttribute="trailing" constant="20" id="MZq-vc-BeN"/>
-                                            <constraint firstItem="CrH-DR-1WT" firstAttribute="centerY" secondItem="m1S-4k-aIU" secondAttribute="centerY" id="mQp-GP-OkP"/>
                                             <constraint firstAttribute="trailing" secondItem="PYi-kv-vvx" secondAttribute="trailing" id="sFk-gu-S53"/>
+                                            <constraint firstItem="PYi-kv-vvx" firstAttribute="leading" secondItem="Pjy-6h-Lxi" secondAttribute="trailing" constant="20" id="v8W-6T-CAE"/>
+                                            <constraint firstItem="Pjy-6h-Lxi" firstAttribute="centerY" secondItem="m1S-4k-aIU" secondAttribute="centerY" id="vho-Kk-qhF"/>
                                             <constraint firstItem="PYi-kv-vvx" firstAttribute="top" secondItem="m1S-4k-aIU" secondAttribute="top" id="ziT-1O-bMY"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -165,10 +177,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="jIZ-gc-9mQ">
-                                        <rect key="frame" x="0.0" y="313.5" width="280" height="94.5"/>
+                                        <rect key="frame" x="0.0" y="388" width="335" height="119"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlM-z9-OXR">
-                                                <rect key="frame" x="247.5" y="0.5" width="32.5" height="94.5"/>
+                                                <rect key="frame" x="294" y="0.5" width="41" height="119"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="mlM-z9-OXR" secondAttribute="height" multiplier="158:457" id="xp5-yO-6G3"/>
                                                 </constraints>
@@ -178,21 +190,25 @@
                                                     <action selector="eventButtonUp3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hRx-WC-FMZ"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sputnik was launched by the USSR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d76-Z0-Den">
-                                                <rect key="frame" x="20" y="28.5" width="207.5" height="38.5"/>
+                                            <button opaque="NO" contentMode="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4Ne-ID-D3W">
+                                                <rect key="frame" x="20" y="43" width="254" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" red="0.0" green="0.15765291449999999" blue="0.39071524140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="Sputnik was launched by the USSR">
+                                                    <color key="titleColor" red="0.0" green="0.16078431369999999" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="openWebView3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TG5-rk-al1"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="4Ne-ID-D3W" firstAttribute="leading" secondItem="jIZ-gc-9mQ" secondAttribute="leading" constant="20" id="2kf-Vf-xOc"/>
                                             <constraint firstAttribute="trailing" secondItem="mlM-z9-OXR" secondAttribute="trailing" id="4pq-ek-IrX"/>
                                             <constraint firstAttribute="bottom" secondItem="mlM-z9-OXR" secondAttribute="bottom" id="CWG-YQ-1S5"/>
-                                            <constraint firstItem="mlM-z9-OXR" firstAttribute="leading" secondItem="d76-Z0-Den" secondAttribute="trailing" constant="20" id="N6b-zN-r6B"/>
-                                            <constraint firstItem="d76-Z0-Den" firstAttribute="leading" secondItem="jIZ-gc-9mQ" secondAttribute="leading" constant="20" id="X4z-8i-S18"/>
+                                            <constraint firstItem="4Ne-ID-D3W" firstAttribute="centerY" secondItem="jIZ-gc-9mQ" secondAttribute="centerY" id="Vz9-55-zTg"/>
                                             <constraint firstItem="mlM-z9-OXR" firstAttribute="top" secondItem="jIZ-gc-9mQ" secondAttribute="top" id="q1k-Wr-PTU"/>
-                                            <constraint firstItem="d76-Z0-Den" firstAttribute="centerY" secondItem="jIZ-gc-9mQ" secondAttribute="centerY" id="zCX-1B-Fik"/>
+                                            <constraint firstItem="mlM-z9-OXR" firstAttribute="leading" secondItem="4Ne-ID-D3W" secondAttribute="trailing" constant="20" id="vDv-qF-pdI"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -203,19 +219,19 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="0:60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iO-oE-we5">
-                                <rect key="frame" x="101.5" y="457" width="117" height="67"/>
+                                <rect key="frame" x="129" y="556" width="117" height="67"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="56"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Shake to complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdK-G0-OFB">
-                                <rect key="frame" x="79.5" y="524" width="161" height="24"/>
+                                <rect key="frame" x="107" y="623" width="161" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.18729665875434875" green="0.53918766975402832" blue="0.68108826875686646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gU-tz-18b">
-                                <rect key="frame" x="64.5" y="466" width="191" height="48"/>
+                                <rect key="frame" x="92" y="565" width="191" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="BTr-5h-Se4"/>
                                     <constraint firstAttribute="width" constant="191" id="Z9N-Yn-b56"/>
@@ -243,13 +259,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="eventLabel0" destination="bDa-S0-aRf" id="Ozs-sP-KLm"/>
-                        <outlet property="eventLabel1" destination="a5T-ad-Aqv" id="mfO-4H-rzH"/>
-                        <outlet property="eventLabel2" destination="CrH-DR-1WT" id="kT0-6Y-td1"/>
-                        <outlet property="eventLabel3" destination="d76-Z0-Den" id="qjk-Bh-L5m"/>
+                        <outlet property="eventLabel0" destination="Hgt-EH-XOM" id="BML-he-EXL"/>
+                        <outlet property="eventLabel1" destination="pmt-rz-FHW" id="Iln-DD-9Gj"/>
+                        <outlet property="eventLabel2" destination="Pjy-6h-Lxi" id="mO2-Ku-gsr"/>
+                        <outlet property="eventLabel3" destination="4Ne-ID-D3W" id="SLH-xY-qyb"/>
                         <outlet property="nextRoundButton" destination="5gU-tz-18b" id="qhP-vY-E2F"/>
+                        <outlet property="shakePromptLabel" destination="cdK-G0-OFB" id="UYM-ww-A6c"/>
                         <outlet property="timerLabel" destination="3iO-oE-we5" id="Z1k-eR-2iq"/>
                         <segue destination="HI1-fr-Tzy" kind="presentation" identifier="gameViewToFinalScore" id="K6n-7g-BNj"/>
+                        <segue destination="5qG-gj-Tlv" kind="presentation" identifier="openWebView" id="mda-cH-zUm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -261,11 +279,11 @@
             <objects>
                 <viewController id="HI1-fr-Tzy" customClass="FinalScoreController" customModule="BoutTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uUe-D2-SVX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gr9-I8-VFH">
-                                <rect key="frame" x="90" y="316" width="140" height="50"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gr9-I8-VFH">
+                                <rect key="frame" x="117.5" y="316" width="140" height="50"/>
                                 <color key="backgroundColor" red="0.19847723841667175" green="0.56266999244689941" blue="0.70875757932662964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="7gM-vV-ptp"/>
@@ -283,14 +301,14 @@
                                     <action selector="playAgain:" destination="HI1-fr-Tzy" eventType="touchUpInside" id="tPp-fr-MuC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6/6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VyE-8Y-GHH">
-                                <rect key="frame" x="123" y="232" width="74" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="6/6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VyE-8Y-GHH">
+                                <rect key="frame" x="150.5" y="232" width="74" height="58"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5r-pl-TcN">
-                                <rect key="frame" x="120.5" y="217" width="80" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Your Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5r-pl-TcN">
+                                <rect key="frame" x="147.5" y="217" width="80" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.18729665879999999" green="0.53918766979999999" blue="0.68108826879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -316,6 +334,53 @@
             </objects>
             <point key="canvasLocation" x="990" y="135"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="QRe-px-eHm">
+            <objects>
+                <viewController id="5qG-gj-Tlv" customClass="WebViewController" customModule="BoutTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9lY-dI-7Un">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0b-qP-jhG">
+                                <rect key="frame" x="0.0" y="47.5" width="375" height="619.5"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5H-Gf-EdM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="N5H-Gf-EdM" secondAttribute="height" multiplier="111:14" id="gsw-2L-NFD"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="webview_bar.png"/>
+                                <connections>
+                                    <action selector="dismissWebView:" destination="5qG-gj-Tlv" eventType="touchUpInside" id="ZP2-AN-oAN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="N5H-Gf-EdM" firstAttribute="top" secondItem="9lY-dI-7Un" secondAttribute="top" id="1Uu-uR-BpV"/>
+                            <constraint firstItem="e0b-qP-jhG" firstAttribute="leading" secondItem="40d-Ne-Tu9" secondAttribute="leading" id="IIV-Cp-hUX"/>
+                            <constraint firstItem="e0b-qP-jhG" firstAttribute="trailing" secondItem="40d-Ne-Tu9" secondAttribute="trailing" id="dtm-Uu-5rr"/>
+                            <constraint firstItem="N5H-Gf-EdM" firstAttribute="leading" secondItem="40d-Ne-Tu9" secondAttribute="leading" id="r00-Tg-EBe"/>
+                            <constraint firstItem="e0b-qP-jhG" firstAttribute="top" secondItem="N5H-Gf-EdM" secondAttribute="bottom" id="vmO-b0-QD3"/>
+                            <constraint firstAttribute="bottom" secondItem="e0b-qP-jhG" secondAttribute="bottom" id="wof-YW-dd9"/>
+                            <constraint firstItem="40d-Ne-Tu9" firstAttribute="trailing" secondItem="N5H-Gf-EdM" secondAttribute="trailing" id="wsS-lm-PlN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="40d-Ne-Tu9"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="e0b-qP-jhG" id="hzJ-77-fIL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxy-Xh-0lM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018.4" y="875.71214392803608"/>
+        </scene>
     </scenes>
     <resources>
         <image name="down_full.png" width="158" height="457"/>
@@ -327,5 +392,6 @@
         <image name="up_full_selected.png" width="158" height="457"/>
         <image name="up_half.png" width="158" height="229"/>
         <image name="up_half_selected.png" width="158" height="229"/>
+        <image name="webview_bar.png" width="1333" height="167"/>
     </resources>
 </document>

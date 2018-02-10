@@ -36,6 +36,7 @@
 		0770E7AD202D1AE100575136 /* IncorrectBuzz.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0770E7AB202D1AE100575136 /* IncorrectBuzz.wav */; };
 		0770E7AE202D1AE100575136 /* CorrectDing.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0770E7AC202D1AE100575136 /* CorrectDing.wav */; };
 		0770E7B0202E220B00575136 /* FinalScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0770E7AF202E220B00575136 /* FinalScoreController.swift */; };
+		0770E7B2202E4B0700575136 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0770E7B1202E4B0700575136 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		0770E7AB202D1AE100575136 /* IncorrectBuzz.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = IncorrectBuzz.wav; sourceTree = "<group>"; };
 		0770E7AC202D1AE100575136 /* CorrectDing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CorrectDing.wav; sourceTree = "<group>"; };
 		0770E7AF202E220B00575136 /* FinalScoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalScoreController.swift; sourceTree = "<group>"; };
+		0770E7B1202E4B0700575136 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				076051ED201FBAC80028EB79 /* AppDelegate.swift */,
 				076051EF201FBAC80028EB79 /* ViewController.swift */,
 				0770E7AF202E220B00575136 /* FinalScoreController.swift */,
+				0770E7B1202E4B0700575136 /* WebViewController.swift */,
 				076051F1201FBAC80028EB79 /* Main.storyboard */,
 				076051F4201FBAC80028EB79 /* Assets.xcassets */,
 				076051F6201FBAC80028EB79 /* LaunchScreen.storyboard */,
@@ -241,6 +244,7 @@
 				0760522C202CC6A60028EB79 /* Events.swift in Sources */,
 				076051F0201FBAC80028EB79 /* ViewController.swift in Sources */,
 				076051EE201FBAC80028EB79 /* AppDelegate.swift in Sources */,
+				0770E7B2202E4B0700575136 /* WebViewController.swift in Sources */,
 				0770E7B0202E220B00575136 /* FinalScoreController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

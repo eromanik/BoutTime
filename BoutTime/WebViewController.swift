@@ -1,5 +1,5 @@
 //
-//  FinalScoreController.swift
+//  WebViewController.swift
 //  BoutTime
 //
 //  Created by Eric Romanik on 2/9/18.
@@ -7,17 +7,28 @@
 //
 
 import UIKit
+import WebKit
 
-class FinalScoreController: UIViewController {
+class WebViewController: UIViewController {
 
-    @IBOutlet weak var finalScoreLabel: UILabel!
+    @IBOutlet weak var webView: WKWebView!
+    
+    @IBAction func dismissWebView(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        finalScoreLabel.text = "\(correctRoundCount)/\(roundCount)"
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let urlString = selectedEvent.webURL
+        let url: URL = URL(string: urlString)!
+        let urlRequest: URLRequest = URLRequest(url: url)
+        webView.load(urlRequest)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,14 +36,7 @@ class FinalScoreController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func playAgain(_ sender: Any) {
-        
-        dismiss(animated: true, completion: nil)
-    }
-    
-    
-    
-    
+
     /*
     // MARK: - Navigation
 

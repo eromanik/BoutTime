@@ -19,10 +19,12 @@ class ViewController: UIViewController {
     var correctSound: SystemSoundID = 0
     var wrongSound: SystemSoundID = 1
     
-    @IBOutlet weak var eventLabel0: UILabel!
-    @IBOutlet weak var eventLabel1: UILabel!
-    @IBOutlet weak var eventLabel2: UILabel!
-    @IBOutlet weak var eventLabel3: UILabel!
+
+    @IBOutlet weak var eventLabel0: UIButton!
+    @IBOutlet weak var eventLabel1: UIButton!
+    @IBOutlet weak var eventLabel2: UIButton!
+    @IBOutlet weak var eventLabel3: UIButton!
+    
     
     @IBAction func eventButtonDown0(_ sender: Any) {
         roundEvents.events.swapAt(0, 1)
@@ -50,18 +52,54 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var shakePromptLabel: UILabel!
     @IBOutlet weak var nextRoundButton: UIButton!
     
     @IBAction func nextRoundButton(_ sender: Any) {
         if roundCount <= 5 {
             startRound()
         } else {
+            gameRunningFlag = false
             self.performSegue(withIdentifier: "gameViewToFinalScore", sender: self)
         }
     }
     
+
+    @IBAction func openWebView0(_ sender: Any) {
+        if !roundOpenFlag {
+            selectedEvent = roundEvents.events[0]
+            self.performSegue(withIdentifier: "openWebView", sender: self)
+        }
+    }
+
+    @IBAction func openWebView1(_ sender: Any) {
+        if !roundOpenFlag {
+            selectedEvent = roundEvents.events[1]
+            self.performSegue(withIdentifier: "openWebView", sender: self)
+        }
+    }
+    
+    @IBAction func openWebView2(_ sender: Any) {
+        if !roundOpenFlag {
+            selectedEvent = roundEvents.events[2]
+            self.performSegue(withIdentifier: "openWebView", sender: self)
+        }
+    }
+    
+    @IBAction func openWebView3(_ sender: Any) {
+        if !roundOpenFlag {
+            selectedEvent = roundEvents.events[3]
+            self.performSegue(withIdentifier: "openWebView", sender: self)
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        eventLabel0.contentHorizontalAlignment = .left
+        eventLabel1.contentHorizontalAlignment = .left
+        eventLabel2.contentHorizontalAlignment = .left
+        eventLabel3.contentHorizontalAlignment = .left
         loadCorrectAnswerSound()
         loadWrongAnswerSound()
         startRound()
@@ -81,23 +119,30 @@ class ViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        roundCount = 0
-        correctRoundCount = 0
-        startRound()
+        if !gameRunningFlag {
+            roundCount = 0
+            correctRoundCount = 0
+            gameRunningFlag = true
+            startRound()
+        }
+       
     }
     
     func startRound() {
+        roundOpenFlag = true
         roundCount += 1
         seconds = 60
         nextRoundButton.isHidden = true
         timerLabel.text = "0:60"
         timerLabel.isHidden = false
+        shakePromptLabel.text = "Shake to complete"
         runTimer()
         roundEvents = generateEventRound()
         displayEvents()
     }
     
     func endRound() {
+        roundOpenFlag = false
         let image: UIImage
         if roundEvents.isOrderedCorrectly() {
             // set next round button background to success and increment correct answer count
@@ -110,6 +155,7 @@ class ViewController: UIViewController {
             image = UIImage(named: "next_round_fail.png")!
         }
         nextRoundButton.setBackgroundImage(image, for: UIControlState.normal)
+        shakePromptLabel.text = "Tap events to learn more"
         
         // display next round button
         nextRoundButton.isHidden = false
@@ -125,10 +171,14 @@ class ViewController: UIViewController {
     }
     
     func displayEvents() {
-        eventLabel0.text = roundEvents.events[0].eventDescription
-        eventLabel1.text = roundEvents.events[1].eventDescription
-        eventLabel2.text = roundEvents.events[2].eventDescription
-        eventLabel3.text = roundEvents.events[3].eventDescription
+        var attributedString = NSMutableAttributedString(string: roundEvents.events[0].eventDescription)
+        eventLabel0.setAttributedTitle(attributedString, for: .normal)
+        attributedString = NSMutableAttributedString(string: roundEvents.events[1].eventDescription)
+        eventLabel1.setAttributedTitle(attributedString, for: .normal)
+        attributedString = NSMutableAttributedString(string: roundEvents.events[2].eventDescription)
+        eventLabel2.setAttributedTitle(attributedString, for: .normal)
+        attributedString = NSMutableAttributedString(string: roundEvents.events[3].eventDescription)
+        eventLabel3.setAttributedTitle(attributedString, for: .normal)
     }
     
     @objc func updateTimer() {
