@@ -20,9 +20,10 @@ struct Event {
     let webURL: String
 }
 
+// this object holds the set of events that is displayed and reordered during each round
+
 struct EventRound {
     var events: [Event]
-    
     func isOrderedCorrectly() -> Bool {
         if self.events[0].year < self.events[1].year && self.events[1].year < self.events[2].year && self.events[2].year < self.events[3].year {
             return true
@@ -32,10 +33,8 @@ struct EventRound {
     }
 }
 
+var roundEvents = EventRound(events:[])
 var selectedEvent = Event(eventDescription: "", year: 0, webURL: "")
-
-
-
 
 let eventData: [Event] = [
     Event(eventDescription: "Woodstock", year: 1969, webURL: "https://en.wikipedia.org/wiki/Woodstock"),
@@ -77,7 +76,6 @@ func generateEventRound() -> EventRound {
     var eventRoundArray = EventRound(events: [])
     events = []
     events.append(contentsOf: eventData)
-    
     for _ in 1...4 {
         let indexOfSelectedEvent = GKRandomSource.sharedRandom().nextInt(upperBound: events.count)
         eventRoundArray.events.append(events[indexOfSelectedEvent])

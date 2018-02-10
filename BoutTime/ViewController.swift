@@ -14,17 +14,14 @@ class ViewController: UIViewController {
     var seconds: Int = 60
     weak var timer: Timer?
     var isTimerRunning = false
-    var roundEvents = EventRound(events:[])
     
     var correctSound: SystemSoundID = 0
     var wrongSound: SystemSoundID = 1
     
-
     @IBOutlet weak var eventLabel0: UIButton!
     @IBOutlet weak var eventLabel1: UIButton!
     @IBOutlet weak var eventLabel2: UIButton!
     @IBOutlet weak var eventLabel3: UIButton!
-    
     
     @IBAction func eventButtonDown0(_ sender: Any) {
         roundEvents.events.swapAt(0, 1)
@@ -63,7 +60,6 @@ class ViewController: UIViewController {
             self.performSegue(withIdentifier: "gameViewToFinalScore", sender: self)
         }
     }
-    
 
     @IBAction func openWebView0(_ sender: Any) {
         if !roundOpenFlag {
